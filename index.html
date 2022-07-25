@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Periodic system</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <img
+      src="./images/mobileDevice.jpg"
+      alt=""
+      style="width: 100%; height: 100vh"
+      class="mobile"
+    />
+    <section class="homePage">
+      <div class="table">
+        <a href="#" class="search"><i class="fas fa-search fa-2x"></i></a>
+        <div class="searchArea">
+          <div class="overlay">
+            <input
+              class="t"
+              type="text"
+              placeholder="Search"
+              key="search"
+              id="searchInput"
+            />
+            <button class="close">&times;</button>
+            <ul class="suggestions"></ul>
+            <ul class="suggestions2"></ul>
+          </div>
+        </div>
+
+        <div class="modal">
+          <button class="close">&times;</button>
+          <iframe src="" class="frame"></iframe>
+        </div>
+        <h1 class="t header" key="title"></h1>
+
+        <div class="legendDiv">
+          <h3 class="t legend" key="legend"></h3>
+          <div class="legendInner">
+            <span class="t legendText" key="alcal"></span>
+          </div>
+          <div class="legendInner">
+            <span class="t legendText" key="alcalEarth"></span>
+          </div>
+          <div class="legendInner">
+            <span class="t legendText" key="transitions"></span>
+          </div>
+          <div class="legendInner">
+            <span class="t legendText" key="elements"></span>
+          </div>
+          <div class="legendInner">
+            <span class="t legendText" key="paragraph"></span>
+          </div>
+          <div class="legendInner">
+            <span class="t legendText" key="other"></span>
+          </div>
+          <div class="legendInner">
+            <span class="t legendText" key="metal"></span>
+          </div>
+          <div class="legendInner">
+            <span class="t legendText" key="nonMetal"></span>
+          </div>
+          <div class="legendInner">
+            <span class="t legendText" key="halogens"></span>
+          </div>
+          <div class="legendInner">
+            <span class="t legendText" key="nobleGas"></span>
+          </div>
+        </div>
+
+        <div class="topTable"></div>
+
+        <div class="bottomTable"></div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="aboutPage">
+        <img src="./images/Brain.png" alt="" />
+        <button class="close">&times;</button>
+        <img src="./images/img2.png" alt="" />
+        <img src="./images/img1.png" alt="" />
+        <img src="./images/img3.jpg" alt="" />
+        <div class="aboutTitle">
+          <h2 class="t" key="about"></h2>
+          <div class="info">
+            <p>
+              <span>Web: </span>
+              <a href="https://codepreneurs.brainster.co/" target="_blank"
+                >codepreneurs.co</a
+              >
+            </p>
+            <p>
+              <span class="t" key="mail"> </span>
+              <a href="mailto:contact@brainster.co" target="_blank"
+                >contact@brainster.co</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="DetailsPage">
+      <a class="close">&times;</a>
+      <ul class="information">
+        <li>
+          <span class="t" key="atomicMass"></span>
+          <span class="rightSp"
+            ><i class="fas fa-square"></i
+            ><span class="props" id="atomic_mass"></span
+          ></span>
+        </li>
+        <li>
+          <span class="t" key="density"></span>
+          <span class="rightSp">
+            <i class="fas fa-square"></i
+            ><span class="props" id="density"></span>
+          </span>
+        </li>
+        <li>
+          <span class="t" key="meltingPoint"></span>
+          <span class="rightSp">
+            <i class="fas fa-square"></i><span class="props" id="melt"></span>
+          </span>
+        </li>
+        <li>
+          <span class="t" key="boiling"></span>
+          <span class="rightSp">
+            <i class="fas fa-square"></i><span class="props" id="boil"></span>
+          </span>
+        </li>
+      </ul>
+      <div class="elementTop"></div>
+      <div class="elementTopRight"></div>
+      <div class="elementBottom"></div>
+      <div class="rightCarousel">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner"></div>
+          <a class="carousel-control-prev" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="rightDetails">
+        <i class="fas fa-search"></i>
+        <input
+          class="t"
+          type="text"
+          placeholder="Search"
+          key="detailsSearch"
+          id="searchInput"
+        />
+        <span
+          >01.
+          <h6 class="t" key="overview"></h6
+        ></span>
+        <hr />
+        <ul>
+          <li>
+            <span class="t" key="symbols"></span
+            ><span class="values" id="symbol"></span>
+          </li>
+          <li>
+            <span class="t" key="atomicNum"></span
+            ><span class="values" id="number"></span>
+          </li>
+          <li>
+            <span class="t" key="atomicMass"></span
+            ><span class="values" id="atomic_mass"></span>
+          </li>
+          <li>
+            <span class="t" key="density"></span
+            ><span class="values" id="density"></span>
+          </li>
+          <li>
+            <span class="t" key="meltingPoint"></span
+            ><span class="values" id="melt"></span>
+          </li>
+          <li>
+            <span class="t" key="boiling"></span
+            ><span class="values" id="boil"></span>
+          </li>
+        </ul>
+        <span
+          >02.
+          <h6 class="t" key="thermalProp"></h6
+        ></span>
+        <hr />
+        <ul>
+          <li>
+            <span class="t" key="phase"></span
+            ><span class="values" id="phase"></span>
+          </li>
+          <li>
+            <span class="t" key="meltingPoint"></span
+            ><span class="values" id="melt"></span>
+          </li>
+          <li>
+            <span class="t" key="boiling"></span
+            ><span class="values" id="boil"></span>
+          </li>
+          <li>
+            <span class="t" key="absMeltPoint"></span
+            ><span class="values" id="absoluteMeltingPoint"></span>
+          </li>
+          <li>
+            <span class="t" key="absBoilPoint"></span
+            ><span class="values" id="absoluteBoilingPoint"></span>
+          </li>
+          <li>
+            <span class="t" key="preasure"></span
+            ><span class="values" id="preasure"></span>
+          </li>
+          <li>
+            <span class="t" key="temperature"></span
+            ><span class="values" id="temperature"></span>
+          </li>
+          <li>
+            <span class="t" key="heatFusion"></span
+            ><span class="values" id="heat"></span>
+          </li>
+          <li>
+            <span class="t" key="heatVaporization"></span
+            ><span class="values" id="vaporization"></span>
+          </li>
+          <li>
+            <span class="t" key="heatCombustion"></span
+            ><span class="values" id="combustion"></span>
+          </li>
+          <li>
+            <span class="t" key="heat"></span
+            ><span class="values" id="specific_heat"></span>
+          </li>
+          <li>
+            <span class="t" key="index"></span
+            ><span class="values" id="index"></span>
+          </li>
+          <li>
+            <span class="t" key="neel"></span
+            ><span class="values" id="neel"></span>
+          </li>
+          <li>
+            <span class="t" key="thermal"></span
+            ><span class="values" id="thermal"></span>
+          </li>
+          <li>
+            <span class="t" key="expansion"></span
+            ><span class="values" id="expansion"></span>
+          </li>
+        </ul>
+        <span
+          >03.
+          <h6 class="t" key="physicalProp"></h6
+        ></span>
+        <hr />
+        <ul>
+          <li>
+            <span class="t" key="density"></span
+            ><span class="values" id="density"></span>
+          </li>
+          <li>
+            <span class="t" key="liquid"></span
+            ><span class="values" id="liquid"></span>
+          </li>
+          <li>
+            <span class="t" key="molarV"></span
+            ><span class="values" id="molarVolume"></span>
+          </li>
+          <li>
+            <span class="t" key="brinelHardness"></span
+            ><span class="values" id="brinell"></span>
+          </li>
+          <li>
+            <span class="t" key="mohs"></span
+            ><span class="values" id="mohs"></span>
+          </li>
+          <li>
+            <span class="t" key="vickers"></span
+            ><span class="values" id="vickers"></span>
+          </li>
+          <li>
+            <span class="t" key="shear"></span
+            ><span class="values" id="shear"></span>
+          </li>
+          <li>
+            <span class="t" key="bulk"></span
+            ><span class="values" id="bulk"></span>
+          </li>
+          <li>
+            <span class="t" key="molarHeat"></span
+            ><span class="values" id=" molar_heat"></span>
+          </li>
+          <li>
+            <span class="t" key="thermalExp"></span
+            ><span class="values" id="thermalExpansion"></span>
+          </li>
+        </ul>
+        <span
+          >04.
+          <h6 class="t" key="reactivity"></h6
+        ></span>
+        <hr />
+        <ul>
+          <li>
+            <span class="t" key="valence"></span
+            ><span class="values" id="valence"></span>
+          </li>
+          <li>
+            <span class="t" key="electronegativity"></span
+            ><span class="values" id="electronegativity_pauling"></span>
+          </li>
+          <li>
+            <span class="t" key="afinity"></span
+            ><span class="values" id="electron_affinity"></span>
+          </li>
+          <li>
+            <span class="t" key="ionization"></span
+            ><span class="values" id="ionization_energies"></span>
+          </li>
+        </ul>
+        <span
+          >05.
+          <h6 class="t" key="safety"></h6
+        ></span>
+        <hr />
+        <ul>
+          <li>
+            <span class="t" key="autoigniton"></span
+            ><span class="values" id="autoignition"></span>
+          </li>
+          <li>
+            <span class="t" key="flashpoint"></span
+            ><span class="values" id="flashpoint"></span>
+          </li>
+          <li>
+            <span class="t" key="heatCombustion"></span
+            ><span class="values" id="combustion"></span>
+          </li>
+        </ul>
+        <span
+          >06.
+          <h6 class="t" key="classification"></h6
+        ></span>
+        <hr />
+        <ul>
+          <li>
+            <span class="t" key="alternateName"></span
+            ><span class="values" id="alternate"></span>
+          </li>
+          <li>
+            <span class="t" key="namesOfAlotropes"></span
+            ><span class="values" id="allotropes"></span>
+          </li>
+          <li>
+            <span class="t" key="block"></span
+            ><span class="values" id="ypos"></span>
+          </li>
+          <li>
+            <span class="t" key="group"></span
+            ><span class="values" id="group"></span>
+          </li>
+          <li>
+            <span class="t" key="period"></span
+            ><span class="values" id="period"></span>
+          </li>
+          <li>
+            <span class="t" key="color"></span
+            ><span class="values" id="color"></span>
+          </li>
+          <li>
+            <span class="t" key="discovery"></span
+            ><span class="values" id="discovered_by"></span>
+          </li>
+          <li>
+            <span class="t" key="gasPhase"></span
+            ><span class="values" id="phase"></span>
+          </li>
+        </ul>
+        <span
+          >07.
+          <h6 class="t" key="electrical"></h6
+        ></span>
+        <hr />
+        <ul>
+          <li>
+            <span class="t" key="elType"></span
+            ><span class="values" id="electrical_type"></span>
+          </li>
+          <li>
+            <span class="t" key="conductivity"></span
+            ><span class="values" id="conductivity"></span>
+          </li>
+          <li>
+            <span class="t" key="resistvity"></span
+            ><span class="values" id="resistivity"></span>
+          </li>
+          <li>
+            <span class="t" key="superconductic"></span
+            ><span class="values" id="superconducting"></span>
+          </li>
+        </ul>
+        <span
+          >08.
+          <h6 class="t" key="magnetic"></h6
+        ></span>
+        <hr />
+        <ul>
+          <li>
+            <span class="t" key="magneticType"></span
+            ><span class="values" id="magnetic"></span>
+          </li>
+          <li>
+            <span class="t" key="curePoint"></span
+            ><span class="values" id="cure"></span>
+          </li>
+          <li>
+            <span class="t" key="massMagnetic"></span
+            ><span class="values" id="mass"></span>
+          </li>
+          <li>
+            <span class="t" key="molarMagnetic"></span
+            ><span class="values" id="molar"></span>
+          </li>
+          <li>
+            <span class="t" key="volumeMagnetic"></span
+            ><span class="values" id="volume"></span>
+          </li>
+        </ul>
+        <span
+          >09.
+          <h6 class="t" key="abundances"></h6
+        ></span>
+        <hr />
+        <ul>
+          <li>
+            <span class="t" key="inUniverse"></span
+            ><span class="values" id="universe"></span>
+          </li>
+          <li>
+            <span class="t" key="sun"></span
+            ><span class="values" id="sun"></span>
+          </li>
+          <li>
+            <span class="t" key="meteoritis"></span
+            ><span class="values" id="meteorities"></span>
+          </li>
+          <li>
+            <span class="t" key="earths"></span
+            ><span class="values" id="earths"></span>
+          </li>
+          <li>
+            <span class="t" key="oceans"></span
+            ><span class="values" id="oceans"></span>
+          </li>
+          <li>
+            <span class="t" key="humans"></span
+            ><span class="values" id="humans"></span>
+          </li>
+        </ul>
+        <span
+          >10.
+          <h6 class="t" key="atomicDimensions"></h6
+        ></span>
+        <hr />
+        <ul>
+          <li>
+            <span class="t" key="atomicRadius"></span
+            ><span class="values" id="atomic_radius"></span>
+          </li>
+          <li>
+            <span class="t" key="covalent"></span
+            ><span class="values" id="covalent"></span>
+          </li>
+          <li>
+            <span class="t" key="vanDerWalls"></span
+            ><span class="values" id="vanDerWalls"></span>
+          </li>
+          <li>
+            <span class="t" key="crystal"></span
+            ><span class="values" id="crystal"></span>
+          </li>
+          <li>
+            <span class="t" key="laticeAngles"></span
+            ><span class="values" id="laticeAngles"></span>
+          </li>
+          <li>
+            <span class="t" key="laticeConstants"></span
+            ><span class="values" id="laticeConstants"></span>
+          </li>
+          <li>
+            <span class="t" key="spaceGr"></span
+            ><span class="values" id="space"></span>
+          </li>
+          <li>
+            <span class="t" key="spaceNum"></span
+            ><span class="values" id="spacegroupnumber"></span>
+          </li>
+        </ul>
+        <span
+          >11.
+          <h6 class="t" key="nuclear"></h6
+        ></span>
+        <hr />
+        <ul>
+          <li>
+            <span class="t" key="half"></span
+            ><span class="values" id="halflife"></span>
+          </li>
+          <li>
+            <span class="t" key="lifetime"></span
+            ><span class="values" id="lifetime"></span>
+          </li>
+          <li>
+            <span class="t" key="decay"></span
+            ><span class="values" id="alpha"></span>
+          </li>
+          <li>
+            <span class="t" key="quantum"></span
+            ><span class="values" id="quantum"></span>
+          </li>
+          <li>
+            <span class="t" key="neutron"></span
+            ><span class="values" id="cross"></span>
+          </li>
+          <li>
+            <span class="t" key="neutronMass"></span
+            ><span class="values" id="neutronMass"></span>
+          </li>
+          <li>
+            <span class="t" key="isotopes"></span
+            ><span class="values" id="knownIsotopes"></span>
+          </li>
+          <li>
+            <span class="t" key="stable"></span
+            ><span class="values" id="stable"></span>
+          </li>
+          <li>
+            <span class="t" key="isotopic"></span
+            ><span class="values" id="isotopic"></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="footer-icons">
+        <div class="language">
+          <div class="mk circle" id="mk">
+            <span class="mktext">MK</span>
+            <span class="text">EN</span>
+          </div>
+          <div class="en circle activec" id="en">
+            <img src="./images/enFlag.png" alt="" class="enflag" />
+            <img src="./images/mkFlag.png" alt="" class="mkflag" />
+          </div>
+        </div>
+        <div class="sound circle">
+          <span class="off"><i class="fas fa-volume-off"></i></span>
+          <span class="on"><i class="fas fa-volume-up"></i></span>
+          <audio src="./click.mp3" id="audio"></audio>
+        </div>
+      </div>
+
+      <div class="iconsRight">
+        <div class="circle insta">
+          <a
+            href="https://www.instagram.com/brainsterco/?hl=en"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="circle fb">
+          <a href="https://www.facebook.com/brainster.co/" target="_blank">
+            <i class="fab fa-facebook-f"></i
+          ></a>
+        </div>
+        <div class="circle dot">
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./jquery.min.js"></script>
+    <script src="./periodic_table_mk.js"></script>
+    <script src="./periodic_table_en.js"></script>
+    <script src="./language.js"></script>
+    <script src="./iframes.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
